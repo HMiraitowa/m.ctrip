@@ -1,0 +1,381 @@
+ body {
+     min-width: 320px;
+     max-width: 540px;
+     margin: 0 auto;
+     font: normal 14px/1.5 Tahoma, "Lucida Grande", Werdana, "Microsoft Yahei", STXihei, hei;
+     color: #000;
+     background: #f2f2f2;
+     overflow-x: hidden;
+     height: 1200px;
+     -webkit-tap-highlight-color: transparent;
+ }
+ 
+ a {
+     text-decoration: none;
+     font-size: 12px;
+     color: #222;
+ }
+ 
+ div {
+     box-sizing: border-box;
+ }
+ 
+ ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+ 
+ .search-index {
+     position: fixed;
+     display: flex;
+     top: 0%;
+     left: 50%;
+     /* 兼容老版本 */
+     -webkit-transform: translateX(-50%);
+     transform: translateX(-50%);
+     min-width: 320px;
+     max-width: 540px;
+     width: 100%;
+     height: 44px;
+     /* background-color: pink; */
+ }
+ 
+ .search {
+     position: relative;
+     height: 26px;
+     line-height: 24px;
+     border: 1px solid #ccc;
+     flex: 1;
+     font-size: 14px;
+     color: #666;
+     padding-left: 25px;
+     margin: 7px 10px;
+     border-radius: 15px;
+     background-color: #f6f6f6;
+     border-top: 1px solid #ccc;
+     border-bottom: 1px;
+     outline-color: #666;
+ }
+ 
+ .search::before {
+     position: absolute;
+     top: 5px;
+     left: 5px;
+     content: "";
+     /* display: block; */
+     width: 35px;
+     height: 15px;
+     background: url(../images/sprite.png) no-repeat -59px -279px;
+     background-size: 104px auto;
+ }
+ 
+ .user {
+     width: 44px;
+     height: 44px;
+     /* background-color: purple; */
+     font-size: 12px;
+     color: #2eaae0;
+     text-align: center;
+ }
+ 
+ .user::before {
+     content: "";
+     display: block;
+     width: 25px;
+     height: 24px;
+     background: url(../images/sprite.png) no-repeat -59px -194px;
+     background-size: 104px auto;
+     margin: 3px auto 0;
+     border-bottom: -2px;
+ }
+ 
+ .focus {
+     padding-top: 44px;
+ }
+ 
+ .focus img {
+     width: 100%;
+ }
+ 
+ .local-nav {
+     display: flex;
+     height: 64px;
+     background-color: #fff;
+     border-radius: 8px;
+     margin: 3px 4px;
+ }
+ 
+ .local-nav li {
+     flex: 1;
+ }
+ 
+ .local-nav a {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+ }
+ 
+ .local-nav li [class^="local-nav-icon"] {
+     width: 32px;
+     height: 32px;
+     /* background-color: #2eaae0; */
+     background: url(../images/localnav_bg.png) no-repeat 0 0;
+     background-size: 32px auto;
+     margin-top: 8px;
+ }
+ 
+ .local-nav li .local-nav-icon-icon2 {
+     background-position: 0 -32px;
+ }
+ 
+ .local-nav li .local-nav-icon-icon3 {
+     background-position: 0 -64px;
+ }
+ 
+ .local-nav li .local-nav-icon-icon4 {
+     background-position: 0 -96px;
+ }
+ 
+ .local-nav li .local-nav-icon-icon5 {
+     background-position: 0 -128px;
+ }
+ 
+ nav {
+     overflow: hidden;
+     border-radius: 8px;
+     margin: 0 4px 3px;
+ }
+ 
+ .nav-common {
+     display: flex;
+     height: 88px;
+     background: pink;
+ }
+ 
+ .nav-items:nth-child(1) {
+     border: 0;
+ }
+ 
+ .nav-common .nav-items {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     /* justify-content: space-around; */
+ }
+ 
+ .nav-items a {
+     flex: 1;
+     text-align: center;
+     line-height: 44px;
+     color: #fff;
+     font-size: 14px;
+     text-shadow: 1px 1px rgba(0, 0, 0, .2);
+ }
+ 
+ .nav-items a:nth-child(1) {
+     border-bottom: 1px solid #f2f2f2;
+ }
+ /* 酒店-机票-旅游导航栏背景图片 */
+ 
+ .nav-common:nth-child(1) .nav-items:nth-child(1) a {
+     border: 0;
+     background: url(../images/hotel.png) no-repeat bottom center;
+     background-size: 121px auto;
+ }
+ 
+ .nav-common:nth-child(2) .nav-items:nth-child(1) a {
+     border: 0;
+     background: url(../images/airport.png) no-repeat bottom center;
+     background-size: 121px auto;
+ }
+ 
+ .nav-common:nth-child(3) .nav-items:nth-child(1) a {
+     border: 0;
+     background: url(../images/sofa.png) no-repeat bottom center;
+     background-size: 121px auto;
+ }
+ 
+ .nav-items:nth-child(-n+2) {
+     border-right: 2px solid #F2F2F2;
+ }
+ 
+ .nav-common:nth-child(2) {
+     margin: 3px 0;
+ }
+ 
+ .nav-common:nth-child(1) {
+     background: -webkit-linear-gradient(left, #FB5C56, #FB8450);
+ }
+ 
+ .nav-common:nth-child(2) {
+     background: -webkit-linear-gradient(left, #4B90ED, #53BCEE);
+ }
+ 
+ .nav-common:nth-child(3) {
+     background: -webkit-linear-gradient(left, #36C3A8, #6AD45A);
+ }
+ /* 侧导航栏 */
+ 
+ .subnav-entry {
+     display: flex;
+     border-radius: 8px;
+     background-color: #fff;
+     margin: 0 4px;
+     flex-wrap: wrap;
+     padding: 5px 0;
+ }
+ 
+ .subnav-entry li {
+     flex: 20%;
+ }
+ 
+ .subnav-entry a {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+ 
+ .subnav-entry li [class^="subnav-entry-icon"] {
+     width: 28px;
+     height: 28px;
+     margin-top: 3px;
+     /* background-color: pink; */
+     background: url(../images/subnav-bg1.png) no-repeat;
+     background-size: 28px auto;
+     margin: 10px 0 4px;
+ }
+ 
+ .subnav-entry li .subnav-entry-icon-icon2 {
+     background-position: 0 -30px;
+ }
+ 
+ .subnav-entry li .subnav-entry-icon-icon3 {
+     background-position: 0 -55px;
+ }
+ 
+ .subnav-entry li .subnav-entry-icon-icon4 {
+     background-position: 0px -85px;
+ }
+ 
+ .subnav-entry li .subnav-entry-icon-icon5 {
+     background-position: 0 -111px;
+ }
+ 
+ .subnav-entry li .subnav-entry-icon-icon6 {
+     background-position: 0 -140px;
+ }
+ 
+ .subnav-entry li .subnav-entry-icon-icon7 {
+     background-position: 0 -168px;
+ }
+ 
+ .subnav-entry li .subnav-entry-icon-icon8 {
+     background-position: 0 -196px;
+ }
+ 
+ .subnav-entry li .subnav-entry-icon-icon9 {
+     background-position: 0 -222px;
+ }
+ 
+ .subnav-entry li .subnav-entry-icon-icon10 {
+     background-position: 0 -250px;
+ }
+ /* 销售模块 */
+ 
+ .sales-box {
+     overflow: hidden;
+     border-top: 1px solod #bbb;
+     background-color: #fff;
+     margin: 4px;
+     border-radius: 8px;
+ }
+ 
+ .sales-hd {
+     position: relative;
+     border-bottom: 1px solid #ccc;
+ }
+ 
+ .sales-hd h2 {
+     position: relative;
+     height: 44px;
+     text-indent: -999px;
+ }
+ 
+ .sales-hd h2::after {
+     position: absolute;
+     top: 8px;
+     left: 20px;
+     content: "";
+     width: 79px;
+     height: 15px;
+     background-color: pink;
+     background: url(../images/hot.png) no-repeat 0 -20px;
+     background-size: 79px auto;
+ }
+ 
+ .more {
+     position: absolute;
+     top: 8px;
+     right: 5px;
+     border-radius: 15px;
+     padding: 3px 20px 3px 8px;
+     background: -webkit-linear-gradient(left, #ff506c, #ff6bc6);
+     color: #fff;
+ }
+ 
+ .more::after {
+     content: "";
+     position: absolute;
+     top: 7px;
+     right: 9px;
+     width: 7px;
+     height: 7px;
+     border-top: 1px solid #eee;
+     border-right: 1px solid #F2F2F2;
+     transform: rotate(45deg);
+ }
+ 
+ .sales-bd {
+     margin-top: 3px;
+ }
+ 
+ .sales-bd .row {
+     display: flex;
+ }
+ 
+ .sales-bd .row a {
+     flex: 1;
+     border-bottom: 1px solid #F2F2F2;
+ }
+ 
+ .row a img {
+     width: 100%;
+ }
+ 
+ .row a:nth-child(1) {
+     border-right: 1px solid #f2f2f2;
+ }
+ 
+ .tool-box {
+     display: flex;
+     background-color: #FFFFFF;
+     border-radius: 8px;
+     margin: 4px;
+ }
+ 
+ .tool-box a {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 10px 0;
+ }
+ 
+ .tool-box img {
+     width: 20px;
+     height: 20px;
+     background: url(../images/tools-phone.png) no-repaet;
+     /* background-size: 20px auto; */
+ }

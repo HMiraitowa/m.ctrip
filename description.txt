@@ -1,0 +1,14 @@
+1. 固定定位跟父级没有关系，以屏幕为准，必须要给宽度
+
+2.在C3盒子模型中，height =line-height 并不能让单行文字垂直居中
+----line-height = height-(border-top+border-botton)
+
+3.ul 是有默认的内边距和外边距的 
+
+4.移动端 如果从网上ba的图片上面写着2x，说明是2倍图的意思 使用fw的时候先把图片等比缩小到原来的二分之一，再切图
+然后在css里面也要缩图  background-size:原图的二分之一  auto
+
+5.css3线性渐变 
+----background:linear-gradient(left,red,pink)//起始位置，开始颜色，介绍颜色
+----必须要加浏览器私有前缀 background: -webkit-linear-gradient()
+-----移动端浏览器基本兼容-webkit-(pc端很少使用)
